@@ -39,6 +39,9 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 #define HAVE_NULLPTR 1
 
+namespace std {
+    typedef decltype(nullptr) nullptr_t; // Apparently this is missing in GCC 4.7...
+}
 #else
 
 namespace std {

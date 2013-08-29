@@ -75,3 +75,5 @@ LOCAL_SRC_FILES := $(LOCAL_SRC_FILES) \
     preprocessor/scanner.c \
     preprocessor/symbols.c \
     preprocessor/tokens.c
+
+LOCAL_CFLAGS := -fno-strict-aliasing

@@ -48,7 +48,9 @@ namespace WTF {
         typedef ValueType* PtrType;
 
         PassOwnPtr() : m_ptr(0) { }
+#if !defined(LOOSE_PASS_OWN_PTR) || !HAVE(NULLPTR)
         PassOwnPtr(std::nullptr_t) : m_ptr(0) { }
+#endif
 
         // It somewhat breaks the type system to allow transfer of ownership out of
         // a const PassOwnPtr. However, it makes it much easier to work with PassOwnPtr

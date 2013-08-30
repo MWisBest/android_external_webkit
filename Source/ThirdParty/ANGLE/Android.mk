@@ -76,4 +76,6 @@ LOCAL_SRC_FILES := $(LOCAL_SRC_FILES) \
     preprocessor/symbols.c \
     preprocessor/tokens.c
 
+ifneq ($(DEBUG_FORCE_STRICT_ALIASING),yes) 
 LOCAL_CFLAGS := -fno-strict-aliasing
+endif
